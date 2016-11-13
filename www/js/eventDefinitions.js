@@ -1,4 +1,4 @@
-var eventDefinitions = 
+﻿var eventDefinitions = 
     {
         // "firstLineStartTime": "",
         "firstLineStartTimeDef": { "time": 15, "type": "bya" },
@@ -126,7 +126,7 @@ var eventDefinitions =
             "endTime": "",
             "endTimeDef": { "time": "", "type": "" },
             "maxPeriod": "",
-            "description": "The Late Heavy Bombardment was an extended barrage of impact events upon the inner planets by meteoroids. The initial crust, formed as the earths surface first solidified, would have been totally distroyed during this bombardment.  Thermal flux from widespread hydrothermal activity during the LHB may have been conducive to life�s emergence",
+            "description": "The Late Heavy Bombardment was an extended barrage of impact events upon the inner planets by meteoroids. The initial crust, formed as the earths surface first solidified, would have been totally distroyed during this bombardment.  Thermal flux from widespread hydrothermal activity during the LHB may have been conducive to life’s emergence",
             "images": [
                 { "url": "images\\\\eventImages\\lateheavybombardment.jpg", "citation": "http://www.abroadintheyard.com/life-on-earth-in-2-years/" }
             ],
