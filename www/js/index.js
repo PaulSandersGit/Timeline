@@ -37,13 +37,18 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        //This is the original function from PhoneGap sample
+        // Simply updated an element in the HTML to show ready
+        // The value of this event is it means you can avoid calling any of the device 
+        // specific functions before the app is fully loaded
+        
+        //var parentElement = document.getElementById(id);
+        //var listeningElement = parentElement.querySelector('.listening');
+        //var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        //listeningElement.setAttribute('style', 'display:none;');
+        //receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        //console.log('Received Event: ' + id);
     }
 };

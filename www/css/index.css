@@ -24,8 +24,9 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+/*  From original sample  
     background-color:lightgrey;
-/*    background-color:#E4E4E4;
+    background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -36,15 +37,16 @@ body {
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
     );
-*/
+
     background-attachment:fixed;
     font-family:'comic sans ms', Arial, sans-serif;
     font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
-   /* text-transform:uppercase; */
+   text-transform:uppercase; 
     width:100%;
+    */
 }
 
 /* Portrait layout (default) */
@@ -58,6 +60,45 @@ body {
 }
 
 
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
+
+/* Our styles */
+
+h1 {text-align:center;}
+
+line.timeline1 {stroke-width:20 ;  stroke:black;}
+line.timeline2 {stroke-width:20 ;  stroke:black;}
+line.timeline3 {stroke-width:20 ;  stroke:black;}
+line.timeline4 {stroke-width:20 ;  stroke:black;}
+line.timeline5 {stroke-width:20 ;  stroke:black;}
+line.tmeline6 {stroke-width:20 ;  stroke:black;}
+rect.timeline  {stroke-width:1 ; stroke:black ; fill:black ; fill-opacity:0.05}
+line.connecter {stroke-width:1 ;  stroke:black;}
+line.connectup {stroke-width:1  ;  stroke:black;}
+line.event {stroke-width:3  ;  stroke:blue;}
+line.selectedevent {stroke-width:3  ;  stroke:red;}
+polygon.transition {  stroke-width:1;   }
+stop.transitiongradient {stop-color: yellow;}
+
+
+p  {color:black ; background-color:white; font-family:segoe; font-size:18px}
+p.date {text-align:right;}
+
+
+
+
+
+/* From original sample 
 h1 {
     font-size:24px;
     font-weight:bold;
@@ -114,47 +155,7 @@ h2 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-ellipse.flame {
-    fill:gold;
-    stroke-width:2;
-    stroke:gold; 
-    /*
-    animation:fade 2000ms infinite;
-    -webkit-animation:fade 2000ms infinite  
-    */
-}
-
-rect.redcandle {
-    fill:red;
-    stroke-width:2;
-    stroke:red      
-}
-
-rect.bluecandle {
-    fill:blue;
-    stroke-width:2;
-    stroke:blue      
-}
-
-rect.greencandle {
-    fill:green;
-    stroke-width:2;
-    stroke:green      
-}
-
-
-rect.indigocandle {
-    fill:indigo;
-    stroke-width:2;
-    stroke:indigo      
-}
-
-rect.orangecandle {
-    fill:orangered;
-    stroke-width:2;
-    stroke:orangered      
-}
-
+*/
 
 
 

@@ -39,129 +39,180 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Timeline</title>
+    
+    <script src="js\\default.js"></script>
+    <script src="js\\eventDefinitions.js"></script>
+    <script src="js\\state.js"></script>
+    <script src="js\\main.js"></script>
+    <script src="js\\utilities.js"></script>
+    <script src="js\\constants.js"></script>
+    
 </head>
 
-<body>
+<body style="background-color:white;" onmousemove=SetValues() onload=initialiseTimelineApp()>
     <div class="app">
-        <img src="appimages\balloons.jpg" alt="Balloons" style="width:285px;height:130px;">
         
-        <h1>Happy 15th Birthday Julian !!!</h1>
-        <h2>I love you - Dad</h2>
-        <p>Click on the button to light the candles, then click on the flames to blow them out</p>
         
-        <button onclick="lightCandles()">Light the candles</button>        
+ <!----------- Main Heading --------->
+<h1>Timeline</h1>
+
+
+
+
+
+<!----------- The timelines --------->
+
+
+<div id="timelines" style="width:1640px">
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2000" height="1000">
+
+<defs>
+    <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop class="transitiongradient" offset="0%" style="stop-opacity:0.4" />
+      <stop class="transitiongradient" offset="100%" style="stop-opacity:0.1" />
+    </linearGradient>
+</defs>
+
+<g id="timelinegroup-0" style="position:absolute;">
+    <rect id="timeline-0" style="position:absolute; visibility:hidden" class="timeline"  x=100  y=40  width=1720  height=20    />
+    
+    <text id="timelineStartText-0" style="visibility:hidden" x=30 y=55 >15 bya CODE WILL CHANGE</text>
+    <text id="timelineEndText-0"  style="visibility:hidden" x=1840 y=55 >Present CODE WILL CHANGE</text>
+   
+    <!--line class="event" x1=100 y1=100 x2=100 y2=120  /-->
+    
+ </g>
+    
+
+<g id="timelinegroup-1" style="position:absolute; ">
+    <rect id="timeline-1" style="position:absolute; visibility:hidden" class="timeline"  x=100  y=100  width=1720  height="20"    />
+    
+    <text id="timelineStartText-1"  style="visibility:hidden" x=30 y=115 ></text>
+    <text id="timelineEndText-1"  style="visibility:hidden" x=1840 y=115 ></text>
  
-        <svg width="250" height="220">
-              <ellipse cx="125" cy="180" rx="120" ry="30" style="fill:chocolate;stroke:chocolate;stroke-width:2" />
-              <rect x="5", y="100", width="240" height="80" style="fill:chocolate;stroke-width:2;stroke:chocolate" />
-              <ellipse  cx="125" cy="100" rx="120" ry="30" style="fill:sienna;stroke:sienna;stroke-width:2" />
-        
-            <rect class="redcandle"  x="125", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(1)" class="flame" id="id1" cx="128" cy="48" rx="3" ry="6" visibility="hidden"  />
-            
-            <rect class="greencandle"  x="90", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(2)" class="flame" id="id2" cx="93" cy="48" rx="3" ry="6" visibility="hidden"  />
+    <polygon id="transition-1" class="transition" style="visibility:hidden" fill="url(#grad1)"  points="1300 62  100 98  1820 98  1820 62   "  />
+   
+ </g>
+     
+<g id="timelinegroup-2" style="position:absolute;">
+    <rect id="timeline-2" style="position:absolute; visibility:hidden" class="timeline"  x=100  y=160  width=1720  height="20"    />
+    
+    <text id="timelineStartText-2"  style="visibility:hidden" x=30 y=175 ></text>
+    <text id="timelineEndText-2"  style="visibility:hidden" x=1840 y=175 ></text>
+   
+   <polygon id="transition-2" class="transition" style="visibility:hidden" fill="url(#grad1)"  points="1300 62  100 98  1820 98  1820 62   "  />
 
-            <rect class="bluecandle"  x="54", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(3)" class="flame" id="id3" cx="57" cy="48" rx="3" ry="6" visibility="hidden"  />
-                        
-            <rect class="indigocandle"  x="20", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(4)" class="flame" id="id4" cx="23" cy="48" rx="3" ry="6" visibility="hidden"  />
+ </g>
 
-            <rect class="indigocandle"  x="160", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(5)" class="flame" id="id5" cx="163" cy="48" rx="3" ry="6" visibility="hidden"  />
-            
+ <g id="timelinegroup-3" style="position:absolute; ">
+    <rect id="timeline-3" style="position:absolute; visibility:hidden" class="timeline"  x=100  y=220  width=1720  height="20"    />
+    
+    <text id="timelineStartText-3"  style="visibility:hidden" x=30 y=235 ></text>
+    <text id="timelineEndText-3"  style="visibility:hidden" x=1840 y=235 ></text>
+   
+    <polygon id="transition-3" class="transition" style="visibility:hidden" fill="url(#grad1)"  points="1300 62  100 98  1820 98  1820 62   "  />
 
-            <rect class="orangecandle"  x="195", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(6)" class="flame" id="id6" cx="198" cy="48" rx="3" ry="6" visibility="hidden"  />
+ </g>
+
+ <g id="timelinegroup-4" style="position:absolute;">
+    <rect id="timeline-4" style="position:absolute; visibility:hidden" class="timeline"  x=100  y=280  width=1720  height="20"    />
+    
+    <text id="timelineStartText-4"  style="visibility:hidden"  x=30 y=295 ></text>
+    <text id="timelineEndText-4"  style="visibility:hidden" x=1840 y=295 ></text>
+
+    <polygon id="transition-4" class="transition" style="visibility:hidden" fill="url(#grad1)"  points="1300 62  100 98  1820 98  1820 62   "  />
+
+   
+ </g>
+
+ <g id="timelinegroup-5" style="position:absolute; ">
+    <rect id="timeline-5" style="position:absolute; visibility:hidden" class="timeline"  x=100 y=340  width=1720  height="20"    />
+    
+    <text id="timelineStartText-5"  style="visibility:hidden" x=30 y=355 ></text>
+    <text id="timelineEndText-5"  style="visibility:hidden" x=1840 y=355 ></text>
+
+    <polygon id="transition-5" class="transition" style="visibility:hidden" fill="url(#grad1)"  points="1300 62  100 98  1820 98  1820 62   "  />
+ 
+   
+ </g>
 
 
-            <rect class="greencandle"  x="230", y="55" width="6" height="45"  />
-            <ellipse onclick="clickFlame(7)" class="flame" id="id7" cx="233" cy="48" rx="3" ry="6" visibility="hidden"  />
 
-            
-            
-            <rect class="bluecandle"  x="110", y="30" width="6" height="45"  />
-            <ellipse onclick="clickFlame(8)" class="flame" id="id8" cx="113" cy="23" rx="3" ry="6" visibility="hidden"  />
-
-            <rect class="orangecandle"  x="75", y="36" width="6" height="45"  />
-            <ellipse onclick="clickFlame(9)" class="flame" id="id9" cx="78" cy="29" rx="3" ry="6" visibility="hidden"  />
-            
-            <rect class="indigocandle"  x="140", y="30" width="6" height="45"  />
-            <ellipse onclick="clickFlame(10)" class="flame" id="id10" cx="143" cy="23" rx="3" ry="6" visibility="hidden"  />
-
-            <rect class="redcandle"  x="175", y="36" width="6" height="45"  />
-            <ellipse onclick="clickFlame(11)" class="flame" id="id11" cx="178" cy="29" rx="3" ry="6" visibility="hidden"  />
-
-            
-            <rect class="indigocandle"  x="210", y="72" width="6" height="45"  />
-            <ellipse onclick="clickFlame(12)"  class="flame" id="id12" cx="213" cy="65" rx="3" ry="6" visibility="hidden"  />
-
-                            
-            <rect class="redcandle"  x="40", y="72" width="6" height="45"  />
-            <ellipse onclick="clickFlame(13)" class="flame" id="id13" cx="43" cy="65" rx="3" ry="6" visibility="hidden"  />
-
-                            
-            <rect class="orangecandle"  x="100", y="82" width="6" height="45"  />
-            <ellipse onclick="clickFlame(14)" class="flame" id="id14" cx="103" cy="75" rx="3" ry="6" visibility="hidden"  />
-
-                            
-            <rect class="greencandle"  x="150", y="82" width="6" height="45"  />
-            <ellipse onclick="clickFlame(15)" class="flame" id="id15" cx="153" cy="75" rx="3" ry="6" visibility="hidden"  />
-            
-            
+<!----------- Connector --------->
+ 
+ <line id="connecter" class="connecter" x1="290" y1="410" x2="830" y2="520"  />
+  <line class="connectup" x1="830" y1="520" x2="830" y2="560"  />
+ 
 </svg>
-        
+
+
+</div>
+
+
+
+
+ <!------------------ Left and Right buttons -------------------------------------------> 
+
+<div style="position:absolute ; left:200px ; top:722px;" >
+    <img src= "images\leftbutton.png" height="120"   />
+</div>
+
+<div style="position:absolute ; left:1600px ; top:722px;" >
+<img src="images\rightbutton.png" height="120" onclick="handleMoveToNextEvent()" />
+ <!-- to do animation    <img src= "images\rightbutton.png" height="120" onclick="init();" /-->
+</div>
+
+
+
+
+<!----------- Image --------->
+<div style="position:absolute ; left:425px ; top:624px;" >
+    <img id="eventImage" src= "images\\eventImages\\Formation Of The Earth.jpg" width="370" height="370" /-->
+    <!--iframe width="430" height="240" src="http://www.youtube.com/embed/QDqskltCixA?feature=player_embedded" frameborder="0" allowfullscreen></!iframe-->
+</div			>
+
+<!----------- Event Title & Description --------->
+<div style="position:absolute ; left:800px ; top:622px; height:370px ; width:700px ; border: 3px black solid;" >
+    <h1  id="eventTitle" >Formation of the Earth</h1>
+    <h2  id="eventTime" >4.5 bya</h2>
+
+    <p  id="eventDescription">The earth forms as matter orbitting the sun collides. The heat generated from these collisions melts the rock, and the earth is initially a molten ball of lava. The inside of the earth is still molten today, 450 billion years later, from these initial collisions. 
+</div>
+
+
+<!----------- Area Where Show Cordinates --------->
+<!--div id="divCoord"></--!div>
+
+<!----------- Area Where Show Debug Messages --------->
+<p id="debugRegion"></p>
+
+
+
+      <!--svg width="800px" height="800px" viewBox="0 0 800 800">
+    <g transform="translate(400, 400)"> <!-- Create a Cartesian coordinate system (with the y-axis flipped) for the animated square. That is, place the origin at the center of the 800 x 800 SVG viewport: -->
+  
+      <!-- A 200 x 200 square with the upper left-hand corner at (-100, -100). This places the center of the square 
+      at the origin (0, 0): >  
+      <rect id="mySquare" x="-100" y="-100" width="200" height="200" rx="5" ry="5" 
+            style=" fill: orange; stroke: black; stroke-width: 3; " />
+            
+      <!-- Represents the x-axis: >
+      <line x1="-400" y1="0" x2="400" y2="0" style="stroke: black;" /> 
+    
+      <!-- Represents the y-axis (although up is negative and down is positive): >  
+      <line x1="0" y1="-400" x2="0" y2="400" style="stroke: black;" /> 
                 
+    </g>
+  </!svg-->
 
-<h2 id="makeawish" visibility="hidden"></h2>
-
-
-
-
-
-
-
-        
-
-<script>
-function lightCandles() {
-    var idprefix = "id";
-    var numberofcandles = 15;
-    var i;
-    for (i = 1; i <= numberofcandles; i++) {
-        document.getElementById(idprefix.concat(i)).setAttribute("visibility","visible");
-    }
-    document.getElementById("makeawish").innerHTML = ""
-}
-
-    
-function clickFlame(i) {
-    var idprefix = "id";
-    var numberofcandles = 15;
-    document.getElementById(idprefix.concat(i)).setAttribute("visibility","hidden");
-
-    var numberlit = 0
-    var i;
-    for (i = 1; i <= numberofcandles; i++) {
-        if (document.getElementById(idprefix.concat(i)).getAttribute("visibility") == "visible") { 
-            numberlit=numberlit+1};
-    }
-    if (numberlit == 0 ) {
-        document.getElementById("makeawish").innerHTML = "Make a wish!!!"
-    }
-    
-}
-
-    
-    
-</script>
-
+ 
         
 
 
-        
+
+    </div>    
     
 
     
