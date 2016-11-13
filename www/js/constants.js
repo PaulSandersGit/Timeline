@@ -1,12 +1,12 @@
-﻿// Constants
+// Constants
 
 var MAXNUMBEROFTIMELINES = 6;
 
 var FIRSTTIMELINEX = 100;   // Position of first timeline
-var FIRSTTIMELINEY = 40;
+var FIRSTTIMELINEY = 50;
 var TIMELINEHEIGHT = 20;
-var TIMELINEWIDTH = 1720;
-var TIMELINEGAP = 80;           // Distance between top of each timeline
+var TIMELINEWIDTH = 810;
+var TIMELINEGAP = 60;           // Distance between top of each timeline
 var TEXTVERTICALOFFSET = 15;   // The amount the text appears below the top of the line 
 var TRANSITIONGAP = 2;
 
